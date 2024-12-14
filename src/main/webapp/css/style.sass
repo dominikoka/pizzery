@@ -1,0 +1,239 @@
+// Variables
+$primary-color: #ff6347
+// Example color, adjust as needed
+$secondary-color: #fff
+// Background color
+$font-color: #333
+// Text color
+
+// Base styles
+body
+  font-family: Arial, sans-serif
+  background-color: $secondary-color
+  margin: 0
+  padding: 0
+.form
+  border: 2px solid black
+  border-radius: 20px
+  padding: 20px
+  width: 1000px
+  margin: 40px auto
+  &__box
+    text-align: center
+    width: 400px
+    margin: auto
+  &__input
+    width: 100%
+// Navbar styles
+.navbar
+  background-color: $primary-color
+  padding: 1rem
+
+  &__nav
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__ul
+    list-style: none
+    padding: 0
+    display: flex
+
+  &__li
+    margin: 0 1.5rem
+
+    a
+      color: $secondary-color
+      text-decoration: none
+      font-weight: bold
+
+      &:hover
+        text-decoration: underline
+
+// Main section styles
+.main
+  display: flex
+  justify-content: center
+  padding: 2rem
+
+  &__box
+    max-width: 800px
+    width: 100%
+    text-align: center
+
+.pizza
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+  &__title
+    font-size: 2rem
+    margin-bottom: 1rem
+    color: $font-color
+    flex: 1 0 220px
+    text-align: left
+
+  &__label
+    font-size: 1rem
+    color: $font-color
+    margin-right: 1rem
+
+  &__select
+    padding: 0.5rem
+    border: 1px solid $font-color
+    border-radius: 4px
+    margin-bottom: 1rem
+
+  &__desc
+    font-size: 1rem
+    color: $font-color
+    margin: 1rem 0
+    width: 100%
+    text-align: left
+
+  &__img
+    height: 100px
+
+  &__orderBtn
+    background-color: $primary-color
+    color: $secondary-color
+    border: none
+    padding: 0.5rem 1rem
+    border-radius: 4px
+    cursor: pointer
+
+    &:hover
+      background-color: darken($primary-color, 10%)
+
+.pizza
+  cursor: pointer
+
+h1
+  text-align: center
+  margin: 2rem 0
+  font-size: 2.5rem
+
+.accordion
+  width: 90%
+  max-width: 1000px
+  margin: 2rem auto
+
+.accordion-item
+  border-radius: 0.5rem
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25)
+
+.accordion-item-header
+  display: flex
+  align-items: center
+  position: relative
+  cursor: pointer
+
+  &::after
+    content: "\002B"
+    font-size: 2rem
+    position: absolute
+    right: 1rem
+
+  &.active::after
+    content: "\2212"
+
+.accordion-item-body
+  max-height: 0
+  overflow: hidden
+  transition: max-height 0.2s ease-out
+
+.accordion-item-body-content
+  padding: 1rem
+  line-height: 1.5rem
+  border-top: 1px solid
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1
+
+@media (max-width: 767px)
+  html
+    font-size: 14px
+.ingredient
+  display: flex
+  flex-direction: column
+  align-items: baseline
+  width: 130px
+  margin: auto
+  &__element
+    display: flex
+    gap: 5px
+  &__name
+    margin: 0
+.pizzaInfo
+  &__box
+    background-color: black
+    color: wheat
+    border-radius: 20px
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+    text-align: center
+    width: 500px
+    height: 500px
+    justify-content: center
+
+.Order
+  &__title
+    padding: 17px 0px 0px 15px
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 15px
+
+  &__modifyIngredients
+    display: flex
+    gap: 10px
+
+  &__modifyIngredient
+    display: flex
+    gap: 5px
+
+
+.switch
+  position: relative
+  display: inline-block
+  width: 36px
+  height: 20px
+
+  input[type="checkbox"]
+    /* display: none */
+    -webkit-appearance: none
+
+    &:checked + .knob
+      background-color: #4bd663
+
+    & + .knob
+      transition: all 0.3s ease-in
+
+      &:before
+        transition: all 0.3s ease-in
+
+    &:checked + .knob:before
+      transform: translateX(11.4px)
+      box-shadow: -10px 0px 44px 0px
+
+  .knob
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #ccc
+    border-radius: 40px
+
+    &:before
+      position: absolute
+      background-color: white
+      content: ""
+      left: 4px
+      top: 1px
+      width: 18px
+      height: 18px
+      border-radius: 50%
