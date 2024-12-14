@@ -57,8 +57,8 @@ public class GetPayServlet extends HttpServlet {
     var phone = jObj.getString("phone");
     var lname = jObj.getString("lname");
     var email = jObj.getString("email");
-    EmailSender emailSender = new EmailSender("666test666@o2.pl", "Dupadupa666");
-    emailSender.sendEmail(email,"pizzeria", "zamowienie zostanie dostarczone na adress" + adress);
+//    EmailSender emailSender = new EmailSender("", "");
+//    emailSender.sendEmail(email,"pizzeria", "zamowienie zostanie dostarczone na adress" + adress);
 //    SmsSender smsSender = new SmsSender(Integer.parseInt(phone));
 //    smsSender.sendSms(Integer.parseInt(phone),"zamowienie zostalo wyslane")
 
